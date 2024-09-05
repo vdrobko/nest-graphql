@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CurrentDateTime {
+  date: String!
+  time: String!
+}
+
+type Weather {
+  description: String!
+  temp: Float!
+  max_temp: Float!
+  min_temp: Float!
+  feels_like: Float!
+}
+
+type LocationGeo {
+  latitude: Float!
+  longitude: Float!
+  weather: Weather
+}
+
+type Query {
+  getCurrentDateTime: CurrentDateTime!
+  getWeatherByCity(city: String!): Weather!
+  getGeoLocation(city: String!): LocationGeo!
+}
